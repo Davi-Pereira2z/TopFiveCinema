@@ -1,0 +1,15 @@
+:root {
+  --azulEscuro: #101626;
+  --azul: #0583f2;
+  --amarelo: #f2b544;
+  --vermelho: #bf2c2c;
+  --preto: #0d0d0d;
+  --cinza: #4b5a69;
+  --cinzaClaro: #a9b4c0;
+  --branco: #f4f6f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,131 @@
+/* ==========================================
+   TopFive Cinema - Header Geral
+   ========================================== 
+*/
+
+:root {
+  --azulEscuro: #101626;
+  --azul: #0583f2;
+  --amarelo: #f2b544;
+  --vermelho: #bf2c2c;
+  --preto: #0d0d0d;
+  --cinza: #4b5a69;
+  --cinzaClaro: #a9b4c0;
+  --branco: #f4f6f9;
+}
+
+.headerPrincipal {
+  background-color: var(--azulEscuro);
+  border-bottom: 1px solid var(--cinza);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.conteudoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2%;
+  position: relative;
+}
+
+.logo {
+  display: block;
+  background-color: var(--branco);
+  padding: 0.25rem;
+  border-radius: 0.8rem;
+}
+
+.imagemLogo {
+  display: block;
+  height: 5.5rem;
+  width: auto;
+}
+
+/* Menu para celular */
+.menu ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.linkMenu {
+  display: block;
+  padding: 0.5rem 0.8rem;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--branco);
+  border-bottom: 3px solid transparent;
+}
+
+.linkMenu:hover,
+.linkAtivo {
+  color: var(--amarelo);
+  border-bottom: 3px solid var(--amarelo);
+}
+
+.botaoMenu {
+  display: none;
+  background: none;
+  border: 1px solid var(--cinza);
+  border-radius: 0.5rem;
+  color: var(--branco);
+  font-size: 1.5rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
+
+.botaoMenu:hover {
+  border-color: var(--amarelo);
+}
+
+.logo:focus-visible,
+.linkMenu:focus-visible,
+.botaoMenu:focus-visible {
+  outline: 3px solid var(--azul);
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .imagemLogo {
+    height: 4rem;
+  }
+
+  .botaoMenu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--azulEscuro);
+    border-bottom: 1px solid var(--cinza);
+  }
+
+  .menuAberto {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 5% 1rem;
+  }
+
+  .linkMenu {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--cinza);
+  }
+
+  .linkMenu:hover,
+  .linkAtivo {
+    border-bottom: 3px solid var(--amarelo);
+  }
+}
